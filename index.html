@@ -11,14 +11,14 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23C2185B' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 22C6 11 14 5 24 5s18 6 18 17'/%3E%3Cpath d='M13 22c0-6 5-10 11-10s11 4 11 10'/%3E%3Cpath d='M20 22c0-2.5 1.8-4 4-4s4 1.5 4 4'/%3E%3Cpath d='M6 28c7 0 13 2.5 18 8 5-5.5 11-8 18-8 0 9.5-8 16-18 16S6 37.5 6 28z'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
   --ivory:#FBF7F2; --paper:#F5EEE6; --blush:#F4E3E4; --blush2:#EBCFD3;
   --crimson:#C2185B; --crimson-d:#9C1249; --ink:#24161C; --ink2:#4A3A40; --mute:#8A7A80;
   --line:rgba(36,22,28,.12); --white:#fff;
-  --serif:'Instrument Serif', serif;
+  --serif:'Instrument Serif','Nanum Myeongjo', serif;
   --sans:'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   --ease:cubic-bezier(.22,1,.36,1);
   --r:28px;
@@ -47,8 +47,7 @@ input,select,textarea{font:inherit;color:inherit}
 .btn-o{border:1px solid var(--line);background:rgba(255,255,255,.6);backdrop-filter:blur(8px)}
 .btn-o:hover{border-color:var(--ink);background:#fff}
 .btn svg{width:18px;height:18px}
-.mark{width:34px;height:34px;flex:none}
-.mark path{fill:none;stroke:var(--crimson);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.mark{width:34px;height:34px;flex:none;color:var(--crimson)}
 
 /* reveal */
 [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
@@ -99,9 +98,9 @@ body.menu-open .mnav{clip-path:circle(150% at 100% 0)}
 /* hero */
 .hero{position:relative;min-height:100vh;padding:140px 0 60px;overflow:hidden;background:radial-gradient(120% 80% at 85% 10%,#FBE9EC 0%,rgba(251,233,236,0) 55%),var(--ivory)}
 #petals{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
-.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.hero h1{font-size:clamp(42px,6.4vw,92px);line-height:1.08;font-weight:700;letter-spacing:-.05em;margin:26px 0 30px}
-.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.18fr .82fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(38px,4.8vw,80px);line-height:1.08;font-weight:700;letter-spacing:-.05em;margin:26px 0 30px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;white-space:nowrap}
 .hero h1 .ln>span{display:inline-block;transform:translateY(110%);transition:transform 1.3s var(--ease)}
 .loaded .hero h1 .ln>span{transform:none}
 .loaded .hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
@@ -375,7 +374,7 @@ section{position:relative}
 .ticket{width:min(440px,100%);background:var(--ivory);border-radius:30px;overflow:hidden;animation:pop .7s var(--ease)}
 @keyframes pop{from{transform:translateY(40px) scale(.96);opacity:0}to{transform:none;opacity:1}}
 .ticket-top{background:var(--crimson);color:#fff;padding:34px 32px 30px;position:relative}
-.ticket-top .mark path{stroke:#fff}
+.ticket-top .mark{color:#fff}
 .ticket-top small{display:block;font-size:12px;letter-spacing:.16em;opacity:.8;margin-top:18px}
 .ticket-top b{font-size:30px;letter-spacing:-.03em}
 .ticket-top .no{position:absolute;right:30px;top:34px;font-family:var(--serif);font-style:italic;font-size:20px}
@@ -406,7 +405,7 @@ footer{background:var(--ink);color:rgba(251,247,242,.62);padding:80px 0 120px;fo
 .f-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
 .f-top .logo b{color:#fff}
 .f-top .logo small{color:rgba(251,247,242,.45)}
-.f-top .mark path{stroke:#F3B6CB}
+.f-top .mark{color:#F3B6CB}
 .f-info{display:grid;gap:6px;line-height:1.7}
 .f-info span{margin:0 10px;opacity:.3}
 .f-bot{display:flex;justify-content:space-between;gap:20px;padding-top:28px;flex-wrap:wrap;font-size:13px}
@@ -480,7 +479,7 @@ footer{background:var(--ink);color:rgba(251,247,242,.62);padding:80px 0 120px;fo
 </div>
 
 <svg width="0" height="0" style="position:absolute">
-  <symbol id="mk" viewBox="0 0 48 48"><path d="M6 22C6 11 14 5 24 5s18 6 18 17"/><path d="M13 22c0-6 5-10 11-10s11 4 11 10"/><path d="M20 22c0-2.5 1.8-4 4-4s4 1.5 4 4"/><path d="M6 28c7 0 13 2.5 18 8 5-5.5 11-8 18-8 0 9.5-8 16-18 16S6 37.5 6 28z"/></symbol>
+  <symbol id="mk" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22C6 11 14 5 24 5s18 6 18 17"/><path d="M13 22c0-6 5-10 11-10s11 4 11 10"/><path d="M20 22c0-2.5 1.8-4 4-4s4 1.5 4 4"/><path d="M6 28c7 0 13 2.5 18 8 5-5.5 11-8 18-8 0 9.5-8 16-18 16S6 37.5 6 28z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="17" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></g></symbol>
@@ -970,8 +969,6 @@ document.querySelectorAll('.clinic-panel').forEach((p,pi)=>{
   });
   // place desc after its row (2 columns)
 });
-function layoutChips(){document.querySelectorAll('.chips').forEach(box=>{const two=getComputedStyle(box).gridTemplateColumns.split(' ').length>1;const pairs=[];const ch=[...box.children];for(let i=0;i<ch.length;i+=2)pairs.push([ch[i],ch[i+1]]);box.innerHTML='';if(two){for(let i=0;i<pairs.length;i+=2){const a=pairs[i],b=pairs[i+1];box.append(a[0]);if(b)box.append(b[0]);box.append(a[1]);if(b)box.append(b[1])}}else pairs.forEach(p=>box.append(p[0],p[1]))})}
-// keep pairs structure stable: rebuild from original ordering
 document.querySelectorAll('.chips').forEach(box=>box._orig=[...box.children]);
 function relayout(){document.querySelectorAll('.chips').forEach(box=>{const o=box._orig;const two=innerWidth>640;box.innerHTML='';if(two){for(let i=0;i<o.length;i+=4){box.append(o[i]);if(o[i+2])box.append(o[i+2]);box.append(o[i+1]);if(o[i+3])box.append(o[i+3])}}else o.forEach(x=>box.append(x))})}
 relayout();addEventListener('resize',relayout);
